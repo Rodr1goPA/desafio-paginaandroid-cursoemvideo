@@ -6,36 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/style.css">
-        <Script>
-        let geoLoca = function() {
-            let geo = navigator.geolocation
-            function geoCoords(p) {
-                output.innerHTML = 'Cordenadas:'+'<br>'+'Latidude:'+p.coords.latitude+'<br>Longitude:'+p.coords.longitude
-            }
-            let getError = function(error) {
-            switch (error.code) {
-                case error.TIMEOUT:
-                    console.log('Tempo limite para localização')
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    console.log('Localização não disponivel')
-                    break;
-                case error.PERMISSION_DENIED:
-                    console.log('Permição negada')    
-                default:
-                    alert("Erro na gealocalização Código:" +error.code)
-                    break;
-            }
-        }
-        let opcoes = {
-            timeout : 300000,
-            enableHighAccuracy : true,
-            maximumAge : 0
-        }
-        geo.watchPosition(geoCoords , getError , opcoes)
-        }
-    </Script>
+    <link rel="stylesheet" href="estilo/style.css">     
 </head>
 <body>
     <header>
